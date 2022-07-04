@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#3493ff;">
+      <a href="/" class="navbar-brand">Secure Online Telemedicine</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+
+
+
+
+
+        </div>
+
+        <div class="navbar-nav">
+
+          
+          <a href="/" class="btn btn-outline-dark">Home</a>
+          <a href="/contactus" class="btn btn-outline-dark">Contact Us</a>
+          <a href="/aboutus" class="btn btn-outline-dark">About Us</a>
+          <div class="dropdown show">
+            <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a href="/adminclick" class="dropdown-item">Admin</a>
+          <a href="/doctorclick" class="dropdown-item">Doctor</a>
+              <a href="/patientsignup" class="dropdown-item">Sign Up</a>
+              <a href="/patientlogin" class="dropdown-item">Log In</a>
+             
+            </div>
+          </div>
+        
+          
+         
+
+        </div>
+
+      </div>
+    </nav>
+  </div>
+     
+
+</body>
+
+</html>

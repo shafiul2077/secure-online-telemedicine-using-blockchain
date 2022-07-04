@@ -1,0 +1,35 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Django + Coinbase Checkout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card w-25">
+        <!-- Coinbase checkout details -->
+        <div class="card-body">
+          <h5 class="card-title">{{ checkout.name }}</h5>
+          <p class="card-text">
+            {{ checkout.description }}<br>
+            {{ checkout.local_price.amount }} {{ checkout.local_price.currency }}
+          </p>
+          <div>
+            <!-- Coinbase hosted approach (script not required) -->
+            <a class="btn btn-primary w-100" href="{{ checkout_link }}">Click here to enter the payment Gateway!</a>
+            <!-- Coinbase embedded approach (script required) 
+            <div class="mt-2">
+              <a class="btn btn-primary buy-with-crypto w-100" href="{{ checkout_link }}">Purchase (embedded)</a>
+              <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

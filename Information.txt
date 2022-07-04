@@ -1,0 +1,12 @@
+pip install django==3.0.5
+pip install django-widget-tweaks
+pip install xhtml2pdf
+
+py manage.py makemigrations
+py manage.py migrate
+py manage.py runserver
+py manage.py runserver 8080
+py manage.py runserver 9000
+
+npm install
+npm start
