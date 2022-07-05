@@ -1,13 +1,35 @@
-<!DOCTYPE html>
 
+
+<!DOCTYPE html>
 {% load widget_tweaks %}
+{% load static %}
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>Telemedicine</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
   <style type="text/css">
+
     body {
       color: #aa082e;
       background-color: #b6bde7;
@@ -53,68 +75,112 @@
 
 <body>
   {% include "hospital/navbar.html" %}
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-
+ 
 
 
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <div class="container register-form">
-      <div class="form">
-        <div class="note">
-          <p>Register in Secure Online Telemedicine System</p>
-        </div>
+    <div class="">
+      <div class="h-100 bg-dark">
 
-        <div class="form-content">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+  <section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="{% static 'images/hero.png' %}"
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" /> 
               </div>
-              <div class="form-group">
-                {% render_field userForm.username class="form-control" placeholder="Username" %}
-              </div>
-              <div class="form-group">
-                {% render_field patientForm.address class="form-control" placeholder="Address" %}
-              </div>
-              <div class="form-group">
-                {% render_field patientForm.symptoms class="form-control" placeholder="Symptoms" %}
-              </div>
-              <div class="form-group">
-                {% render_field patientForm.profile_pic required="required" class="form-control" placeholder="Profile Picture" %}
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
-              </div>
-              <div class="form-group">
-                {% render_field userForm.password class="form-control" placeholder="Password" %}
-              </div>
-              <div class="form-group">
-                {% render_field patientForm.mobile class="form-control" placeholder="Mobile Number / Email" %} 
-              </div>
-              <div class="form-group">
-                {% render_field patientForm.assignedDoctorId class="form-control" placeholder="Doctor" %}
-              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">Register in Secure Online Telemedicine System</h3>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        {% render_field userForm.username class="form-control" placeholder="Username" %}
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        {% render_field userForm.password class="form-control" placeholder="Password" %}
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="form-outline mb-4">
+                    {% render_field patientForm.mobile class="form-control" placeholder="Mobile Number / Email" %} 
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    {% render_field patientForm.address class="form-control" placeholder="Address" %}
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    {% render_field patientForm.symptoms class="form-control" placeholder="Symptoms" %}
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    {% render_field patientForm.assignedDoctorId class="form-control" placeholder="Doctor" %}
+                  </div>
+                  <div class="form-outline mb-4">
+                    {% render_field patientForm.profile_pic required="required" class="form-control" placeholder="Profile Picture" %}
+                  </div>
+
+  
+                 
+  
+                  <div class="d-flex justify-content-end pt-3">
+                 
+                    <button type="submit" class="btnSubmit">Register</button>
+                  </div>
+                  <div class="text-center">Already have an account? <a href="patientlogin">Login here</a></div>
+  
+                </div>
+              </div>
             </div>
           </div>
-          <button type="submit" class="btnSubmit">Register</button>
-          <div class="text-center">Already have an account? <a href="patientlogin">Login here</a></div>
         </div>
       </div>
     </div>
+  </section>
 
-  </form>
+ </div>  
+</div>
+</form>
+  
+
+ 
 
   {% include "hospital/footer.html" %}
+
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
 </body>
 
 
 </html>
+

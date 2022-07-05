@@ -6,178 +6,150 @@
   <title></title>
 
   <style media="screen">
-    .market-update-block {
-      padding: 2em 2em;
-      background: #999;
-    }
 
-    .market-update-block h3 {
+    .card {
+    
+      background-color: #fff;
+      border-radius: 10px;
+      border: none;
+      position: relative;
+      margin-bottom: 30px;
+      box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+  }
+  .l-bg-cherry {
+      background: linear-gradient(to right, #493240, #f09) !important;
       color: #fff;
-      font-size: 2.5em;
-      font-family: 'Carrois Gothic', sans-serif;
-    }
-
-    .market-update-block h4 {
-      font-size: 1.2em;
+  }
+  
+  .l-bg-blue-dark {
+      background: linear-gradient(to right, #373b44, #4286f4) !important;
       color: #fff;
-      margin: 0.3em 0em;
-      font-family: 'Carrois Gothic', sans-serif;
-    }
-
-    .market-update-block p {
+  }
+  
+  .l-bg-green-dark {
+      background: linear-gradient(to right, #0a504a, #38ef7d) !important;
       color: #fff;
-      font-size: 0.8em;
-      line-height: 1.8em;
-    }
-
-    .market-update-block.clr-block-1 {
-      background: #05da81;
-      margin-right: 0.8em;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-2 {
-      background: #132afc;
-      margin-right: 0.8em;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-3 {
-      background: #f91399;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-1:hover {
-      background: #3C3C3C;
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-2:hover {
-      background: #3C3C3C;
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-3:hover {
-      background: #3C3C3C;
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-right i.fa.fa-user-o {
-      font-size: 3em;
-      color: #68AE00;
-      width: 80px;
-      height: 80px;
-      background: #fff;
+  }
+  
+  .l-bg-orange-dark {
+      background: linear-gradient(to right, #a86008, #ffba56) !important;
+      color: #fff;
+  }
+  
+  .card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+      font-size: 110px;
+  }
+  
+  .card .card-statistic-3 .card-icon {
       text-align: center;
-      border-radius: 49px;
-      -webkit-border-radius: 49px;
-      -moz-border-radius: 49px;
-      -o-border-radius: 49px;
-      line-height: 1.7em;
-    }
-
-    .market-update-right i.fa.fa-user-md {
-      font-size: 3em;
-      color: #FC8213;
-      width: 80px;
-      height: 80px;
-      background: #fff;
-      text-align: center;
-      border-radius: 49px;
-      -webkit-border-radius: 49px;
-      -moz-border-radius: 49px;
-      -o-border-radius: 49px;
-      line-height: 1.7em;
-    }
-
-    .market-update-right i.fa.fa-calendar {
-      font-size: 3em;
-      color: #337AB7;
-      width: 80px;
-      height: 80px;
-      background: #fff;
-      text-align: center;
-      border-radius: 49px;
-      -webkit-border-radius: 49px;
-      -moz-border-radius: 49px;
-      -o-border-radius: 49px;
-      line-height: 1.7em;
-    }
-
-    .market-update-left {
-      padding: 0px;
-    }
+      line-height: 50px;
+      margin-left: 15px;
+      
+      color: #000;
+      position: absolute;
+      right: -5px;
+      top: 20px;
+      opacity: 0.1;
+  }
+  
+  .l-bg-cyan {
+      background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+      color: #fff;
+  }
+  
+  .l-bg-green {
+      background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+      color: #fff;
+  }
+  
+  .l-bg-orange {
+      background: linear-gradient(to right, #f9900e, #ffba56) !important;
+      color: #fff;
+  }
+  
+  .l-bg-cyan {
+      background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+      color: #fff;
+  }
   </style>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 </head>
 
 <body>
-  <div class="market-updates">
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-1">
-        <div class="col-md-8 market-update-left">
-          <h3>{{doctorcount}}</h3>
-          <h4>Total Doctor</h4>
+
+  <div class="container ">
+    
+    <div class="row ">
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-cherry">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-user-md"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">{{doctorcount}}</h5>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h6 class="d-flex align-items-center mb-0">
+                              <h4>Total Doctor</h4>
           <p>Approval Required : {{pendingdoctorcount}}</p>
+                            </h6>
+                        </div>
+                        
+                    </div>
+                  
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-user-md"></i>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-blue-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-procedures"></i></div>
+                    <div class="mb-4">
+                        <h5 class="card-title mb-0">{{patientcount}}</h5>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h6 class="d-flex align-items-center mb-0">
+                              <h4>Total Patient</h4>
+                              <p>Wants to Admit : {{pendingpatientcount}}</p>
+                            </h6>
+                        </div>
+                        
+                    </div>
+                 
+                </div>
+            </div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-orange-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="far fa-calendar-check"></i></div>
+                  <div class="mb-4">
+                      <h5 class="card-title mb-0">{{appointmentcount}}</h5>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                          <h6 class="d-flex align-items-center mb-0">
+                            <h4>Appointment</h4>
+          <p>Approve :{{pendingappointmentcount}} </p>
+                          </h6>
+                      </div>
+                      
+                  </div>
+                  
+              </div>
+          </div>
       </div>
+       
     </div>
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-2">
-        <div class="col-md-8 market-update-left">
-          <h3>{{patientcount}}</h3>
-          <h4>Total Patient</h4>
-          <p>Wants to Admit : {{pendingpatientcount}}</p>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-user-o"></i>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-3">
-        <div class="col-md-8 market-update-left">
-          <h3>{{appointmentcount}}</h3>
-          <h4>Total Appointment</h4>
-          <p>Approve Appointments :{{pendingappointmentcount}} </p>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-calendar"> </i>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
-    <div class="clearfix"> </div>
-  </div>
+</div>
+
+
+  
 </body>
 
 

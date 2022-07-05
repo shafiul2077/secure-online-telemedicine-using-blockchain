@@ -6,292 +6,288 @@
   <title></title>
 
   <style media="screen">
-    .market-update-block {
-      padding: 2em 2em;
-      background: #999;
-    }
 
-    .market-update-block h3 {
+    .card {
+    
+      background-color: #fff;
+      border-radius: 10px;
+      border: none;
+      position: relative;
+      margin-bottom: 30px;
+      box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+  }
+  .l-bg-cherry {
+      background: linear-gradient(to right, #493240, #f09) !important;
       color: #fff;
-      font-size: 1.5em;
-      font-family: 'Carrois Gothic', sans-serif;
-    }
-
-    .market-update-block h4 {
-      font-size: 1.2em;
+  }
+  
+  .l-bg-blue-dark {
+      background: linear-gradient(to right, #373b44, #4286f4) !important;
       color: #fff;
-      margin: 0.3em 0em;
-      font-family: 'Carrois Gothic', sans-serif;
-    }
-
-    .market-update-block p {
+  }
+  
+  .l-bg-green-dark {
+      background: linear-gradient(to right, #0a504a, #38ef7d) !important;
       color: #fff;
-      font-size: 0.8em;
-      line-height: 1.8em;
-    }
-
-    .market-update-block.clr-block-1 {
-      background: #7fca06;
-      margin-right: 0.8em;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-2 {
-      background: #04abc9;
-      margin-right: 0.8em;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-3 {
-      background: #174dd3;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-1:hover {
-      background: #3C3C3C;
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-2:hover {
-      background: #3C3C3C;
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-block.clr-block-3:hover {
-      background: #3C3C3C;
-      transition: 0.5s all;
-      -webkit-transition: 0.5s all;
-      -moz-transition: 0.5s all;
-      -o-transition: 0.5s all;
-    }
-
-    .market-update-right i.fa.fa-user-o,
-    i.fa.fa-map-marker {
-      font-size: 3em;
-      color: #68AE00;
-      width: 80px;
-      height: 80px;
-      background: #fff;
+  }
+  
+  .l-bg-orange-dark {
+      background: linear-gradient(to right, #a86008, #ffba56) !important;
+      color: #fff;
+  }
+  
+  .card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+      font-size: 110px;
+  }
+  
+  .card .card-statistic-3 .card-icon {
       text-align: center;
-      border-radius: 49px;
-      -webkit-border-radius: 49px;
-      -moz-border-radius: 49px;
-      -o-border-radius: 49px;
-      line-height: 1.7em;
-    }
-
-    .market-update-right i.fa.fa-info-circle,
-    i.fa.fa-list-alt {
-      font-size: 3em;
-      color: #FC8213;
-      width: 80px;
-      height: 80px;
-      background: #fff;
-      text-align: center;
-      border-radius: 49px;
-      -webkit-border-radius: 49px;
-      -moz-border-radius: 49px;
-      -o-border-radius: 49px;
-      line-height: 1.7em;
-    }
-
-    .market-update-right i.fa.fa-mobile,
-    i.fa.fa-calendar-o {
-      font-size: 3em;
-      color: #337AB7;
-      width: 80px;
-      height: 80px;
-      background: #fff;
-      text-align: center;
-      border-radius: 49px;
-      -webkit-border-radius: 49px;
-      -moz-border-radius: 49px;
-      -o-border-radius: 49px;
-      line-height: 1.7em;
-    }
-
-    .market-update-right i.fa.fa-user-o,
-    i.fa.fa-map-marker {
-      font-size: 3em;
-      color: #68AE00;
-      width: 80px;
-      height: 80px;
-      background: #fff;
-      text-align: center;
-      border-radius: 49px;
-      -webkit-border-radius: 49px;
-      -moz-border-radius: 49px;
-      -o-border-radius: 49px;
-      line-height: 1.7em;
-    }
-
-
-
-    .market-update-left {
-      padding: 0px;
-    }
+      line-height: 50px;
+      margin-left: 15px;
+      
+      color: #000;
+      position: absolute;
+      right: -5px;
+      top: 20px;
+      opacity: 0.1;
+  }
+  
+  .l-bg-cyan {
+      background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+      color: #fff;
+  }
+  
+  .l-bg-green {
+      background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+      color: #fff;
+  }
+  
+  .l-bg-orange {
+      background: linear-gradient(to right, #f9900e, #ffba56) !important;
+      color: #fff;
+  }
+  
+  .l-bg-cyan {
+      background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+      color: #fff;
+  }
   </style>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 </head>
 
 <body>
-  <div class="market-updates">
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-1">
-        <div class="col-md-8 market-update-left">
-          <h3>{{doctorName}}</h3>
-          <h4>Doctor Name</h4>
+
+  <div class="container ">
+    <div class="row ">
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-cherry">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-user-md"></i></div>
+                    <div class="mb-4">
+                        <h4 class="card-title mb-0">Doctor Name</h4>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h5 class="d-flex align-items-center mb-0">
+                                <br><br>
+                              {{doctorName}}
+                            </h5>
+                        </div>
+                
+                    </div>
+                  
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-user-o"> </i>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-blue-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-frown"></i></div>
+                    <div class="mb-4">
+                        <h4 class="card-title mb-0">Symptoms</h4>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h5 class="d-flex align-items-center mb-0">
+                                <br><br>
+                              {{symptoms}}
+                            </h5>
+                        </div>
+                       
+                    </div>
+                  
+                </div>
+            </div>
         </div>
-        <div class="clearfix"> </div>
-      </div>
+        <div class="col-xl-3 col-lg-6">
+            <div class="card l-bg-green-dark">
+                <div class="card-statistic-3 p-4">
+                    <div class="card-icon card-icon-large"><i class="fas fa-phone"></i></div>
+                    <div class="mb-4">
+                        <h4 class="card-title mb-0">Doctor Mobile</h4>
+                    </div>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-8">
+                            <h5 class="d-flex align-items-center mb-0">
+                                <br><br>
+                              {{doctorMobile}}
+                            </h5>
+                        </div>
+                     
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+        
     </div>
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-2">
-        <div class="col-md-8 market-update-left">
-          <h3>{{symptoms}}</h3>
-          <h4>Symptoms</h4>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-info-circle"></i>
-        </div>
-        <div class="clearfix"> </div>
+</div>
+<div class="container ">
+  <div class="row ">
+      <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-cherry">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="mb-4">
+                      <h4 class="card-title mb-0">Doctor Address</h4>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                          <h5 class="d-flex align-items-center mb-0">
+                            <br>
+                            {{doctorAddress}} 
+                            
+                          </h5>
+                      </div>
+              
+                  </div>
+                
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-3">
-        <div class="col-md-8 market-update-left">
-          <h3>{{doctorMobile}}</h3>
-          <h4>Doctor Mobile</h4>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-mobile" aria-hidden="true"></i>
-        </div>
-        <div class="clearfix"> </div>
+      <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-blue-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-building"></i></div>
+                  <div class="mb-4">
+                      <h4 class="card-title mb-0">Doctor Department</h4>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                          <h5 class="d-flex align-items-center mb-0">
+                            <br><br>
+                            {{doctorDepartment}}
+                          </h5>
+                      </div>
+                     
+                  </div>
+                
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="clearfix"> </div>
+      <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-green-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="far fa-calendar-alt"></i></div>
+                  <div class="mb-4">
+                      <h4 class="card-title mb-0">Admit Date</h4>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                          <h5 class="d-flex align-items-center mb-0">
+                            <br><br>
+                            {{admitDate}}
+                          </h5>
+                      </div>
+                   
+                  </div>
+                
+              </div>
+          </div>
+      </div>
+      
   </div>
+</div>
 
 
-
-  <br><br><br>
-
-
-
-  <div class="market-updates">
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-1">
-        <div class="col-md-8 market-update-left">
-          <h3>{{doctorAddress}}</h3>
-          <h4>Doctor Address</h4>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-map-marker"> </i>
-        </div>
-        <div class="clearfix"> </div>
+<div class="container ">
+    
+  <div class="row ">
+      <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-cherry">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-video"></i></div>
+                  <div class="mb-4">
+                      <h4 class="card-title mb-0">Join the video call</h4>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                   
+                            <a type="button" class="btn btn-outline-light" href="http://localhost:8080/?room=Cardiology" target="_blank" rel="noopener noreferrer"><h5>Video Call</h5></a>
+                       
+                      </div>
+                      
+                  </div>
+                
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-2">
-        <div class="col-md-8 market-update-left">
-          <h3>{{doctorDepartment}}</h3>
-          <h4>Doctor Department</h4>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-list-alt"></i>
-        </div>
-        <div class="clearfix"> </div>
+      <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-blue-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-sign-in-alt"></i></div>
+                  <div class="mb-4">
+                      <h4 class="card-title mb-0">Sign in to coinbase</h4>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                
+                            <a type="button" class="btn btn-outline-light"  href="https://www.coinbase.com/signin" target="_blank" rel="noopener noreferrer"><h5>Coinbase</h5></a>
+                          
+                      </div>
+                      
+                  </div>
+               
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-3">
-        <div class="col-md-8 market-update-left">
-          <h3>{{admitDate}}</h3>
-          <h4>Admit Date</h4>
+      <div class="col-xl-3 col-lg-6">
+        <div class="card l-bg-green-dark">
+            <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large"><i class="fab fa-bitcoin"></i></div>
+                <div class="mb-4">
+                    <h4 class="card-title mb-0">Make Payment</h4>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                    <div class="col-8">
+                      
+                          <a type="button" class="btn btn-outline-light" href="http://127.0.0.1:9000" target="_blank" rel="noopener noreferrer"><h5>Payment</h5></a>
+                       
+                    </div>
+                    
+                </div>
+                
+            </div>
         </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
     </div>
-    <div class="clearfix"> </div>
+     
   </div>
+</div>
 
 
-  <br><br><br>
 
-  <div class="market-updates">
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-1">
-        <div class="col-md-8 market-update-left">
-          <h3>Click to join the video Call</h4>
-          <p>
-            <a href="http://localhost:8080/?room=Cardiology" target="_blank" rel="noopener noreferrer"><h4>Click here to join the video meeting</h4</a>             
-          </p>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-user-o"> </i>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
 
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-2">
-        <div class="col-md-8 market-update-left">
-          <h3>Sign in to coinbase</h3>
-          <p>
-            <a href="https://www.coinbase.com/signin" target="_blank" rel="noopener noreferrer"><h4>Click here to sign in or sign up coinbase</h4></a>             
-          </p>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-info-circle"></i>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
 
-    <div class="col-md-4 market-update-gd">
-      <div class="market-update-block clr-block-3">
-        <div class="col-md-8 market-update-left">
-          <h3>Make Payment</h3>
-          <p>
-            <a href="http://127.0.0.1:9000" target="_blank" rel="noopener noreferrer"><h4>Click here to make secure online telemedicine payment</h4></a>             
-          </p>
-        </div>
-        <div class="col-md-4 market-update-right">
-          <i class="fa fa-mobile" aria-hidden="true"></i>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
-    <div class="clearfix"> </div>
-  </div>
+
+
+  
 </body>
 
 </body>

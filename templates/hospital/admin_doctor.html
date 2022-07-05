@@ -11,121 +11,173 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
-  <style type="text/css">
-    a:link {
-      text-decoration: none;
-    }
-
-    .menu {
-      top: 50px;
-    }
-
-    h6 {
-      color: white;
-    }
-
-    .order-card {
-      color: #fff;
-    }
-
-    .bg-c-blue {
-      background: linear-gradient(45deg, #4099ff, #73b4ff);
-    }
-
-    .bg-c-green {
-      background: linear-gradient(45deg, #2ed8b6, #59e0c5);
-    }
-
-    .bg-c-yellow {
-      background: linear-gradient(45deg, #FFB64D, #ffcb80);
-    }
-
-    .bg-c-pink {
-      background: linear-gradient(45deg, #FF5370, #ff869a);
-    }
-
+  <style media="screen">
 
     .card {
-      border-radius: 5px;
-      -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
-      box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+    
+      background-color: #fff;
+      border-radius: 10px;
       border: none;
+      position: relative;
       margin-bottom: 30px;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .card .card-block {
-      padding: 25px;
-    }
-
-    .order-card i {
-      font-size: 26px;
-    }
-
-    .f-left {
-      float: left;
-    }
-
-    .f-right {
-      float: right;
-    }
+      box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+  }
+  .l-bg-cherry {
+      background: linear-gradient(to right, #493240, #f09) !important;
+      color: #fff;
+  }
+  
+  .l-bg-blue-dark {
+      background: linear-gradient(to right, #373b44, #4286f4) !important;
+      color: #fff;
+  }
+  
+  .l-bg-green-dark {
+      background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+      color: #fff;
+  }
+  
+  .l-bg-orange-dark {
+      background: linear-gradient(to right, #a86008, #ffba56) !important;
+      color: #fff;
+  }
+  
+  .card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+      font-size: 110px;
+  }
+  
+  .card .card-statistic-3 .card-icon {
+      text-align: center;
+      line-height: 50px;
+      margin-left: 15px;
+      
+      color: #000;
+      position: absolute;
+      right: -5px;
+      top: 20px;
+      opacity: 0.1;
+  }
+  
+  .l-bg-cyan {
+      background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+      color: #fff;
+  }
+  
+  .l-bg-green {
+      background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+      color: #fff;
+  }
+  
+  .l-bg-orange {
+      background: linear-gradient(to right, #f9900e, #ffba56) !important;
+      color: #fff;
+  }
+  
+  .l-bg-cyan {
+      background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+      color: #fff;
+  }
   </style>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 </head>
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-xl-3">
-      <div class="card bg-c-blue order-card">
-        <div class="card-block">
-          <a href="/admin-view-doctor">
-            <h6 class="m-b-20">Doctor Record</h6>
-          </a>
-          <br>
-          <h2 class="text-right"><i class="fas fa-user-nurse f-left"></i></h2>
 
-        </div>
+<div class="container ">
+    
+  <div class="row ">
+      <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-cherry">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-user-md"></i></div>
+                  <div class="mb-4">
+                    <h3> <a type="button" class="btn btn-outline-light"  href="/admin-view-doctor-specialisation" target="_blank" rel="noopener noreferrer"><h4>Doctor Specialisation</h4></a> </h3>
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                          <h6 class="d-flex align-items-center mb-0">
+                            <h4></h4>
+        <p></p>
+                          </h6>
+                      </div>
+                      
+                  </div>
+                
+              </div>
+          </div>
       </div>
-    </div>
-
-    <div class="col-md-4 col-xl-3">
-      <div class="card bg-c-green order-card">
-        <div class="card-block">
-          <a href="/admin-add-doctor">
-            <h6 class="m-b-20">Register Doctor</h6>
-          </a>
-          <br>
-          <h2 class="text-right"><i class="fas fa-user-plus f-left"></i></h2>
-        </div>
+      <div class="col-xl-3 col-lg-6">
+          <div class="card l-bg-blue-dark">
+              <div class="card-statistic-3 p-4">
+                  <div class="card-icon card-icon-large"><i class="fas fa-briefcase-medical"></i></div>
+                  <div class="mb-4">
+                    <h3> <a type="button" class="btn btn-outline-light"  href="/admin-view-doctor" target="_blank" rel="noopener noreferrer"><h4>Doctor Record</h4></a> </h3> 
+                  </div>
+                  <div class="row align-items-center mb-2 d-flex">
+                      <div class="col-8">
+                          <h6 class="d-flex align-items-center mb-0">
+                            <h4></h4>
+                            <p></p>
+                          </h6>
+                      </div>
+                      
+                  </div>
+               
+              </div>
+          </div>
       </div>
-    </div>
-
-    <div class="col-md-4 col-xl-3">
-      <div class="card bg-c-yellow order-card">
-        <div class="card-block">
-          <a href="/admin-approve-doctor">
-            <h6 class="m-b-20">Approve Doctor</h6>
-          </a>
-          <br>
-          <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
+      <div class="col-xl-3 col-lg-6">
+        <div class="card l-bg-orange-dark">
+            <div class="card-statistic-3 p-4">
+                <div class="card-icon card-icon-large"><i class="fas fa-user-plus"></i></div>
+                <div class="mb-4">
+                  <h3> <a type="button" class="btn btn-outline-light"  href="/admin-add-doctor" target="_blank" rel="noopener noreferrer"><h4>Register Doctor</h4></a> </h3>
+                </div>
+                <div class="row align-items-center mb-2 d-flex">
+                    <div class="col-8">
+                        <h6 class="d-flex align-items-center mb-0">
+                          <h4></h4>
+        <p> </p>
+                        </h6>
+                    </div>
+                    
+                </div>
+                
+            </div>
         </div>
-      </div>
     </div>
-
-    <div class="col-md-4 col-xl-3">
-      <div class="card bg-c-pink order-card">
-        <div class="card-block">
-          <a href="/admin-view-doctor-specialisation">
-            <h6 class="m-b-20">Doctor Specialisation</h6>
-          </a>
-          <br>
-          <h2 class="text-right"><i class="fas fa-user-md f-left"></i></h2>
-        </div>
+    <div class="col-xl-3 col-lg-6">
+      <div class="card l-bg-cherry">
+          <div class="card-statistic-3 p-4">
+              <div class="card-icon card-icon-large"><i class="fas fa-check-circle"></i></div>
+              <div class="mb-4">
+                <h3> <a type="button" class="btn btn-outline-light"  href="/admin-approve-doctor" target="_blank" rel="noopener noreferrer"><h4>Approve Doctor</h4></a> </h3>
+              </div>
+              <div class="row align-items-center mb-2 d-flex">
+                  <div class="col-8">
+                      <h6 class="d-flex align-items-center mb-0">
+                        <h4></h4>
+    <p></p>
+                      </h6>
+                  </div>
+                  
+              </div>
+            
+          </div>
       </div>
-    </div>
+  </div>
   </div>
 </div>
+
+
+
+
+
+
+
 
 <br><br><br><br><br><br><br>
 {% endblock content %}

@@ -7,22 +7,47 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-  <style media="screen">
-    a:link {
-      text-decoration: none;
-    }
 
-    h6 {
-      text-align: center;
-    }
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oxygen);
 
-    .row {
-      margin: 100px;
-    }
-  </style>
+/* Page layout */
+.styled-table {
+border-collapse: collapse;
+margin: 25px 0;
+font-size: 0.9em;
+font-family: sans-serif;
+min-width: 400px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+background-color: #009879;
+color: #ffffff;
+text-align: left;
+}
+.styled-table th,
+.styled-table td {
+padding: 12px 15px;
+}
+.styled-table tbody tr {
+border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+font-weight: bold;
+color: #009879;
+}
+</style>
 </head>
 
-
+<center>
 
 <div class="container">
 
@@ -33,11 +58,11 @@
  
 
   {% if patients %}
-  <div class="panel panel-primary">
+  <div class="panel ">
     <div class="panel-heading">
       <h6 class="panel-title">Your Total Patient List</h6>
     </div>
-    <table class="table table-hover" id="dev-table">
+    <table class="styled-table" >
       <thead>
         <tr>
           <th>Name</th>
@@ -67,5 +92,5 @@
 
 </div>
 
-
+</center>
 {% endblock content %}

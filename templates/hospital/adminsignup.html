@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 
+{% extends 'hospital/admin_base.html' %}
+{% load widget_tweaks %}
+{% block content %}
 {% load widget_tweaks %}
 <html lang="en" dir="ltr">
 
@@ -21,7 +24,7 @@
     .note {
       text-align: center;
       height: 80px;
-      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      background: black;
       color: #fff;
       font-weight: bold;
       line-height: 80px;
@@ -52,7 +55,7 @@
 
 
 <body>
-  {% include "hospital/navbar.html" %}
+
   <br>
   <br>
   <br>
@@ -64,13 +67,13 @@
   <!--- signup page for admin by admin ---------->
   <form method="post">
     {% csrf_token %}
-    <div class="container register-form">
+    <div class="container register-form ">
       <div class="form">
         <div class="note">
           <p>Add New Admin To Hospital</p>
         </div>
 
-        <div class="form-content">
+        <div class="form-content bg-dark">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
@@ -100,7 +103,8 @@
   </form>
 
 
-  {% include "hospital/footer.html" %}
+ 
 </body>
 
 </html>
+{% endblock content %}

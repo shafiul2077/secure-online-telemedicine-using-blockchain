@@ -3,9 +3,29 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Telemedicine</title>
+  <title>Connect</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
 
 </head>
@@ -13,24 +33,84 @@
 <body>
 
   {% include "hospital/navbar.html" %}
-  <br><br>
 
-  <center>
-    <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
 
-    <form method="POST">
-      <!-- Very Important csrf Token -->
-      {% csrf_token %}
-      <div class="form-group">
-        <p>
-        <h3>{{ form.as_p }}</h3>
-        </p>
-        <br>
-        <input type="submit" value="Send Message" class='btn btn-primary btn-lg'>
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Send Us Your Valuable Feedback !</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box" data-aos="fade-up">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>181/1, Dhaka 1230</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com<br>contact@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>019xxxxxxxx<br>018xxxxxxxx</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+       
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
+              {% csrf_token %}
+             
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  {{ form.as_p }}
+                </div>
+               
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" value="Send Message">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
       </div>
-    </form>
-  </center>
+    </section><!-- End Contact Section -->
+
+
   {% include "hospital/footer.html" %}
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js'%}"></script>
+  
 </body>
 
 

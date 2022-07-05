@@ -2,6 +2,8 @@
 {% load widget_tweaks %}
 {% block content %}
 
+
+
 <head>
   <style media="screen">
     a:link {
@@ -11,7 +13,7 @@
     .note {
       text-align: center;
       height: 80px;
-      background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+      background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,104,121,0.9727241238292192) 24%, rgba(8,110,129,1) 67%, rgba(8,111,130,1) 75%, rgba(0,212,255,1) 100%);
       color: #fff;
       font-weight: bold;
       line-height: 80px;
@@ -42,9 +44,7 @@
     }
   </style>
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <br><br>
 {% if message %}
@@ -60,7 +60,7 @@
 <form method="post">
   {% csrf_token %}
   <div class="container register-form">
-    <div class="form">
+    <div class="form" >
       <div class="note">
         <p>Book Appointment Details</p>
       </div>

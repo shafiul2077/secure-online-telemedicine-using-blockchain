@@ -4,40 +4,71 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Telemedicine</title>
-  <style media="screen">
-    .jumbotron {
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    .jumbotron h1 {
-      text-align: center;
-    }
+  <title>About</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    .alert {
-      margin: 0px;
-    }
-  </style>
-  <title>Telemedicine</title>
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
   {% include "hospital/navbar.html" %}
-  <br><br>
-  <center>
-    <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
-  </center>
-  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
-    <h1 class="display-4">Hello</h1>
-    <p class="lead">A Secure Online Telemedicine service dedicated to  Admin, Doctor and Patient.</p>
-    <hr class="my-4">
-    <p>Explore our Website.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="hospital/index.html" role="button">HOME</a>
-    </p>
-  </div>
+     <!-- ======= Features Section ======= -->
+     <section id="features" class="features section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in">About Us</h2>
+          <p data-aos="fade-in">What we recognize as telemedicine today started in the 1950’s when a few hospital systems and university medical centers started to try to find ways to share information and images via telephone. In one of the first successes, two health centers in Pennsylvania were able to transmit radiologic images over the phone.</p>
+        </div>
+
+        <div class="row content">
+          <div class="col-md-5" data-aos="fade-right">
+            <img src="{% static 'images/doctor_laptop.jpg' %}"  class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-4" data-aos="fade-left">
+            <h3>Using telemedicine as an alternative to in-person visits has a host of benefits for patients and providers alike.</h3>
+            <p class="fst-italic">
+              Patients enjoy:
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Less time away from work</li>
+              <li><i class="bi bi-check"></i> No travel expenses or time</li>
+              <li><i class="bi bi-check"></i> Less interference with child or elder care responsibilities</li>
+              <li><i class="bi bi-check"></i> Privacy</li>
+              <li><i class="bi bi-check"></i>No exposure to other potentially contagious patients</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
   {% include "hospital/footer.html" %}
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
 </body>
 </html>

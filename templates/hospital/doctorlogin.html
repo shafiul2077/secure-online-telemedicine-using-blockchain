@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 {% load widget_tweaks %}
+{% load static %}
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
   <title>Telemedicine</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
 
 
   <style type="text/css">
@@ -53,48 +74,65 @@
 
 <body>
   {% include "hospital/navbar.html" %}
-  <br>
-  <br>
-  <br><br>
-
-
   <form method="post">
     {% csrf_token %}
-    <div class="container register-form">
-      <div class="form">
-        <div class="note">
-          <p>Doctor Login Page</p>
-        </div>
-
-        <div class="form-content">
-          <div class="row">
-            <div class="col-md-6">
-
-              <div class="form-group">
-                {% render_field form.username class="form-control" placeholder="Username" %}
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase">Doctor Login Page</h2>
+                <p class="text-white-50 mb-5">Please enter your login and password!</p>
+  
+                <div class="form-outline form-white mb-4">
+                  {% render_field form.username class="form-control" placeholder="Username" %}
+                </div>
+  
+                <div class="form-outline form-white mb-4">
+                  {% render_field form.password class="form-control" placeholder="Password" %}
+                </div>
+  
+                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
+  
+                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+  
+              
+  
               </div>
-
-            </div>
-            <div class="col-md-6">
-
-              <div class="form-group">
-                {% render_field form.password class="form-control" placeholder="Password" %}
+  
+              <div>
+                <p class="mb-0">Don't have an account? <a href="patientsignup" class="text-white-50 fw-bold">Sign Up</a>
+                </p>
               </div>
-
+  
             </div>
           </div>
-          <button type="submit" class="btnSubmit">Login</button>
-          <div class="text-center">Do not have account? <a href="doctorsignup">Signup here</a></div>
         </div>
       </div>
     </div>
+  </section>
+</form>
 
-  </form>
 
-  <br><br><br>
   
+ 
 
   {% include "hospital/footer.html" %}
+
+ 
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
 </body>
 
 </html>

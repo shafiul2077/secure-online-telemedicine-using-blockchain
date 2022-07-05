@@ -1,89 +1,152 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      max-width: 300px;
-      margin: auto;
-      text-align: center;
-      font-family: arial;
-    }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    .title {
-      color: grey;
-      font-size: 18px;
-    }
+  <title>Telemedicine</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    button {
-      border: none;
-      outline: 0;
-      display: inline-block;
-      padding: 8px;
-      color: white;
-      background-color: #000;
-      text-align: center;
-      cursor: pointer;
-      width: 100%;
-      font-size: 18px;
-    }
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-    button:hover,
-    a:hover {
-      opacity: 0.7;
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      padding: 10px;
-    }
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
 
-    a:link {
-      text-decoration: none;
-    }
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
-    a {
-      color: white;
-    }
-  </style>
+  <!-- =======================================================
+  * Template Name: Bocor - v4.7.1
+  * Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
 
+        <div class="section-title">
+          <h2 data-aos="fade-in">Services</h2>
+          <p data-aos="fade-in">Telemedicine allows health care professionals to evaluate, diagnose and treat patients at a distance using telecommunications technology. The approach has been through a striking evolution in the last decade and it is becoming an increasingly important part of the American healthcare infrastructure.</p>
+        </div>
 
+        <div class="row">
+          <div class="col-md-6 d-flex" data-aos="fade-right">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'images/doctor1.jpg' %}"style="width:600px;height:450px;" />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="/doctorclick">Doctor</a></h5>
+                <p class="card-text">Many doctors now provide virtual medical appointments also known as a telemedicine visit. Connect with us to spread your service.</p>
+                <div class="read-more"><a href="/doctorclick"><i class="bi bi-arrow-right"></i>View</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex" data-aos="fade-left">
+            <div class="card">
+              <div class="card-img">
+                <img src="{% static 'images/pateint1.jpg' %}"  style="width:600px;height:450px;"/>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="/patientclick">Patient</a></h5>
+                <p class="card-text">Wondering how to get started with telehealth? Check out the information below to better understand your options for virtual doctor’s visits.</p>
+                <div class="read-more"><a href="/patientclick"><i class="bi bi-arrow-right"></i>View</a></div>
+              </div>
+            </div>
 
-  <div class="grid-container">
-    <div class="grid-item">
-      <div class="card">
-        <img src="{% static "images/admin.png" %}" alt="John" style="width:100%">
-        <p class="title">ADMIN</p>
-        <p><button><a href="/adminclick">View</a></button></p>
+          </div>
+       
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="pricing" class="pricing section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2 data-aos="fade-in">Pricing</h2>
+        <p data-aos="fade-in">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row no-gutters">
+
+        <div class="col-lg-4 box" data-aos="zoom-in">
+          <h3>Free</h3>
+          <h4>$1<span>per consulting</span></h4>
+          <ul>
+            <li><i class="bx bx-check"></i> High Quality Healthcare from the convenience of your home town</li>
+            <li><i class="bx bx-check"></i> Second opinion for your health needs</li>
+            <li><i class="bx bx-check"></i> Stay in touch with your Doctor - where ever you are</li>
+            <li class="na"><i class="bx bx-x"></i> <span>No waiting in queue for a review</span></li>
+            <li class="na"><i class="bx bx-x"></i> <span>Easy follow-up with your preferred Doctor to ensure proper care</span></li>
+          </ul>
+          <a href="/patientlogin" class="get-started-btn">Get Started</a>
+        </div>
+
+        <div class="col-lg-4 box featured" data-aos="zoom-in">
+          <span class="featured-badge">Featured</span>
+          <h3>Business</h3>
+          <h4>$4<span>per consulting</span></h4>
+          <ul>
+            <li><i class="bx bx-check"></i> High Quality Healthcare from the convenience of your home town</li>
+            <li><i class="bx bx-check"></i> Second opinion for your health needs</li>
+            <li><i class="bx bx-check"></i> Stay in touch with your Doctor - where ever you are</li>
+            <li><i class="bx bx-check"></i> No waiting in queue for a review</li>
+            <li><i class="bx bx-check"></i> Stay assured and feel confident with virtual support</li>
+          </ul>
+          <a href="/patientlogin" class="get-started-btn">Get Started</a>
+        </div>
+
+        <div class="col-lg-4 box" data-aos="zoom-in">
+          <h3>Developer</h3>
+          <h4>$8<span>per consulting</span></h4>
+          <ul>
+            <li><i class="bx bx-check"></i> High Quality Healthcare from the convenience of your home town</li>
+            <li><i class="bx bx-check"></i> Second opinion for your health needs</li>
+            <li><i class="bx bx-check"></i> Stay in touch with your Doctor - where ever you are</li>
+            <li><i class="bx bx-check"></i> No waiting in queue for a review</li>
+            <li><i class="bx bx-check"></i> Stay assured and feel confident with virtual support</li>
+            <li><i class="bx bx-check"></i> Security - all patient information is encrypted and secured</li>
+          </ul>
+          <a href="/patientlogin" class="get-started-btn">Get Started</a>
+        </div>
+
       </div>
 
     </div>
+  </section><!-- End Pricing Section -->
 
-    <div class="grid-item">
-      <div class="card">
-        <img src="{% static "images/doctor.png" %}" alt="John" style="width:100%">
-        <p class="title">DOCTOR</p>
-        <p><button><a href="/doctorclick">View</a></button></p>
-      </div>
-    </div>
 
-    <div class="grid-item">
-      <div class="card">
-        <img src="{% static "images/patient.jpg" %}" alt="John" style="width:100%">
-        <p class="title">PATIENT</p>
-        <p><button><a href="/patientclick">View</a></button></p>
-      </div>
-    </div>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js'%}"></script>
 
-  </div>
- 
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
 
 </body>
 

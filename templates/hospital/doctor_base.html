@@ -11,6 +11,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+  
 
 
 
@@ -274,7 +280,7 @@
 
 <body>
   <!-- partial:index.partial.html -->
-  <nav class="menu" tabindex="0">
+  <nav class="menu text-white" tabindex="0" style="background-color:Gray;">
     <div class="smartphone-menu-trigger"></div>
     <header class="avatar">
       <img src="{% static doctor.profile_pic.url %}" alt="Profile Pic" />
@@ -288,22 +294,26 @@
       <li tabindex="0" class="icon-calendar"> <a style="color:white; text-decoration:none;" href="/doctor-appointment"><span>Appointments</span></a></li>
     </ul>
   </nav>
-  <main>
-    <!-- nav start -->
-    <div class="bs-example">
-      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#2394f7;">
-        <a href="/doctor-dashboard" class="navbar-brand">Doctor Dashboard</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-          <div class="navbar-nav" style=" margin-left: 90%;">
-            <a href="/logout" class="nav-item nav-link">Log Out</a>
 
-          </div>
+  
+  <main>
+
+    <!-- nav start -->
+
+    <nav class=" navbar-inverse" style="background-color:black">
+      <div class="container-fluid">
+        <div class="navbar-header">
+        <b>  <a class="navbar-brand" href="/">Doctor Dashboard</a> </b>
         </div>
-      </nav>
-    </div>
+      
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  
+
     <!-- nav end -->
     <br><br>
     <!-- content start-->
@@ -312,23 +322,20 @@
     <!-- content end-->
     <br><br><br><br><br><br><br>
     <footer>
-      <p>
-        <a id="ftr" href="https://facebook.com/" class="fa fa-facebook"></a>
-        <a id="ftr" href="https://api.whatsapp.com/" class="fa fa-whatsapp"></a>
-        <a id="ftr" href="https://instagram.com/" class="fa fa-instagram"></a>
-        <a id="ftr" href="https://twitter.com/" class="fa fa-twitter"></a>
-      </p>
-      <br>
       <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-sm-12">
-            <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-              <p>A Secure Online Telemedicine System <br>           
-                Copyright &copy; 2021 </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    
+  
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="/contactus" class="nav-link px-2 text-muted">Contact Us</a></li>
+            <li class="nav-item"><a href="/aboutus" class="nav-link px-2 text-muted">About</a></li>
+            <li class="nav-item"><a href="/patientlogin" class="nav-link px-2 text-muted">Log In</a></li>
+          </ul>
+          <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+        </footer>
+     
+      <div>
     </footer>
   </main>
   <!-- partial -->
